@@ -4,7 +4,7 @@ body{
     grid-template-areas: 'navbar navbar navbar navbar'
                           'header section aside div'
                           'footer footer footer footer';
-    grid-template-rows: 20vh 70vh 40vh;
+    grid-template-rows: 20vh 70vh 15vh
 }
 nav{
     grid-area: navbar;
@@ -34,13 +34,13 @@ div {
     grid-area: div;
     background-color: brown;
 }
-a{
+nav a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 30px;
 }
-img{
+nav img{
     cursor: pointer;
     display: none;
    
@@ -48,13 +48,25 @@ img{
 a:hover{
     color: white;
 }
+.meme{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    max-width: 90%;
+}
+header, section, aside, div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 @media(max-width: 768px){
     body{
         grid-template-areas: 'navbar navbar navbar navbar'
                             'header header section section'
                             'aside aside div div'
                             'footer footer footer footer';
-        grid-template-rows: 20vh 70vh 70vh 40vh;
+        grid-template-rows: 20vh 70vh 70vh 15vh;
     }
     nav a{
         display: none;
@@ -72,7 +84,7 @@ a:hover{
                             'aside aside aside aside'
                             'div div div div'
                             'footer footer footer footer';
-        grid-template-rows: 20vh 50vh 50vh 50vh 50vh 40vh;
+        grid-template-rows: 20vh 50vh 50vh 50vh 50vh 15vh;
     }
     nav a{
         display: none;
